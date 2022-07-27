@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ESUM | Qui Sommes Nous{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('vitrine/style.css') }}">
+    <style>
+        .nav-link{
+            font-size:18px;
+        }
+        .nav-link>a{
+            color: #756f6f;
+        }
+        .top-navbar{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+        #carousel-item{
+            height:500px;
+        }
+        .carousel-indicators .active{
+            height: 3px;
+            width: 27px;
+        }
+        .dropdown-item{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #lead{
+            font-weight: bold;
+        }
+        #overviews{
+            margin-top:-20px;
+            margin-right:-15px;
+            margin-left:-15px;
+        }
+        .fadeIn{
+            margin-bottom:150px;
+            margin-left:100px;
+        }
+        #copyrights{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+    </style>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+    <div class="container-fluid">
+        <!-- ======= Top nav ======= -->
+        <!-- Start header -->
+        {{ include('vitrine/header.html.twig') }}
+        <!-- End header -->
+        <div id="overviews" class="section lb">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="message-box">
+                            <h3 style="font-weight: bold">QUI SOMMES-NOUS</h3>
+                            <p>L’ESUM dispense ses enseignements à distance et en ligne de type hybride destinés particulièrement aux publics qui ne peuvent pas assister régulièrement aux cours pour de multiples raisons.</p>
+                            <p>Nous sommes des professeurs d’universités venant de différents horizons, convaincus que l’UNIVERSITE DE DEMAIN sera numérique, en ligne ou à distance.</p>
+                            <p>Des professeurs d’universités, ayant plusieurs années d’expériences en matière d’enseignement de haut niveau et de grande qualité, désirant de transmettre leurs savoirs et leurs connaissances <strong>aux jeunes générations qui de plus en plus s’accommodent aux nouvelles technologies de l’information et de la communication (NTIC).</strong></p>
+                            <p>Nous relevons le grand défi d’un projet émergent qui pourra dans un avenir proche provoquer « un basculement de masse » tendant vers une démocratisation des connaissances en matière de « management » aussi bien dans les grands centres urbains, que dans les centres urbains secondaires qu’en milieu rural. <strong>Une formation de « masse » et de « qualité ». C’est possible avec l’ESUM.</strong></p>
+                            <p><strong>L’ESUM accompagnera des travailleurs</strong> dans l’informel ou des employés dans le secteur moderne désirant d’approfondir leurs connaissances pour améliorer leurs conditions de vie.</p>
+                            <p><strong>L’ESUM permettra aux bacheliers ou étudiants</strong> désirant continuer leurs études dans des endroits de leur choix pour décrocher de hauts diplômes en management pour devenir plus tard de hauts cadres dans de grandes entreprises ou tout simplement pour créer leurs propres entreprises.</p>
+                            <p><strong>Beaucoup de femmes arrêtent leurs études</strong> après le « bacc», ou encore deux ans après le « bacc », pour se marier et devenir de bonnes « mères » de famille. L’ESUM leur offrira des opportunités pour pouvoir continuer leurs études à domicile afin qu’elles puissent plus tard prétendre occuper des postes de cadres dans les entreprises privées ou publiques.</p>
+                            <p>Bien qu’il s’agit de formation à distance ou en ligne,<strong>les professeurs ne seront jamais loin des étudiants</strong>  par le système des « QUESTION-REPONSES » portant sur la programmation mensuelle des cours ou des travaux pratiques.</p>
+                            <p><strong>Notre devise : « LE DEFI DE LA REUSSITE ! ».</strong></p>
+                        </div><!-- end messagebox -->
+                    </div><!-- end col -->
+
+                    <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+                        <div class="post-media wow fadeIn">
+                            <img src="{{ asset('images/vitrine/esum12.png') }}" alt="" class="img-fluid img-1 img-rounded">
+                        </div><!-- end media -->
+                        <div class="post-media wow fadeIn">
+                            <img src="{{ asset('images/vitrine/esum13.png') }}" alt="" class="img-fluid img-2 img-rounded">
+                        </div><!-- end media -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+        <!---- footer ---------------->
+        {{ include('vitrine/footer.html.twig') }}
+        <!---- end footer ------------>
+    </div>
+    {% block main %}
+    {% endblock %}
+{% endblock %}

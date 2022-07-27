@@ -1,0 +1,188 @@
+<div class="nav">
+    <div class="sb-sidenav-menu-heading"></div>
+
+    <div class="sb-sidenav-menu-heading">MENU DE NAVIGATION</div>
+    <a class="nav-link" href="{{ path('admin_dashboard') }}">
+        <div class="sb-nav-link-icon">
+            <i class="feather-home"></i>
+        </div>
+        Tableau de Bord
+    </a>
+    <a class="nav-link" href="{{ path('admin_profile') }}">
+        <div class="sb-nav-link-icon">
+            <i class="feather-user"></i>
+        </div>
+        Mon profil
+    </a>
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMenu" aria-expanded="false" aria-controls="collapseLayoutss">
+        <div class="sb-nav-link-icon">
+            <i class="feather-list"></i>
+        </div>
+        Menu
+        <div class="sb-sidenav-collapse-arrow">
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </a>
+    <div class="collapse" id="collapseMenu" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+        <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{{ path('admin_menu')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-book-open"></i>
+                </div>
+                Liste
+            </a>
+            <a class="nav-link" href="{{ path('admin_kitchen_style_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-star"></i>
+                </div>
+                Style de cuisine
+            </a>
+
+            <a class="nav-link" href="{{ path('admin_kitchen_type_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-star"></i>
+                </div>
+                Type de cuisine
+            </a>
+            <a class="nav-link" href="{{ path('admin_diet_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-star"></i>
+                </div>
+                Régimes alimentaires
+            </a>
+        </nav>
+    </div>
+
+
+
+
+    <a class="nav-link" href="{{ path('admin_price_index')}}">
+        <div class="sb-nav-link-icon">
+            <i class="feather-dollar-sign"></i>
+        </div>
+        Prix
+    </a>
+
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePrestastion" aria-expanded="false" aria-controls="collapseLayoutss">
+        <div class="sb-nav-link-icon">
+            <i class="fas fa-car-side"></i>
+        </div>
+        Prestation
+        <div class="sb-sidenav-collapse-arrow">
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </a>
+    <div class="collapse" id="collapsePrestastion" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+        <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{{ path('admin_number_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-minus"></i>
+                </div>
+                Min Sur Place
+            </a>
+            <a class="nav-link" href="{{ path('admin_max_number_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-maximize"></i>
+                </div>
+                Max Sur Place
+            </a>
+            <hr>
+            <a class="nav-link" href="{{ path('admin_min_number_delivery_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-minus"></i>
+                </div>
+                Min Livraison
+            </a>
+            <a class="nav-link" href="{{ path('admin_max_number_delivery_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-maximize"></i>
+                </div>
+                Max livraison
+            </a>
+            <hr>
+            <a class="nav-link" href="{{ path('admin_min_number_take_away_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-minus"></i>
+                </div>
+                Min à Emporter
+            </a>
+            <a class="nav-link" href="{{ path('admin_max_number_take_away_index')}}">
+                <div class="sb-nav-link-icon">
+                    <i class="feather-maximize"></i>
+                </div>
+                Max à Emporter
+            </a>
+        </nav>
+    </div>
+
+
+
+
+    <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseLayoutss" aria-expanded="false" aria-controls="collapseLayoutss">
+        <div class="sb-nav-link-icon">
+            <i class="feather-users"></i>
+        </div>
+        Utilisateurs
+        <div class="sb-sidenav-collapse-arrow">
+            <i class="fas fa-angle-down"></i>
+        </div>
+    </a>
+    <div class="collapse" id="collapseLayoutss" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+        <nav class="sb-sidenav-menu-nested nav">
+            <a class="nav-link" href="{{ path('admin_customer_index') }}">Clients
+                {{ render(controller('App\\Controller\\Admin\\AdminController::nbrCustomer')) }}
+            </a>
+            <a class="nav-link" href="{{ path('admin_chef_index') }}">Chefs
+                {{ render(controller('App\\Controller\\Admin\\AdminController::nbrChef')) }}
+            </a>
+            <a class="nav-link" href="{{ path('admin_admin_index')}}">Admin
+                {{ render(controller('App\\Controller\\Admin\\AdminController::nbrAdmin')) }}
+            </a>
+        </nav>
+    </div>
+    {#<a class="nav-link" href="reviews.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-star"></i>#}
+    {#</div>#}
+    {#Reviews#}
+    {#</a>#}
+    {#<a class="nav-link" href="bookmarks.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-heart"></i>#}
+    {#</div>#}
+    {#Bookmarks#}
+    {#</a>#}
+    {#<a class="nav-link" href="add-listing.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-plus-circle"></i>#}
+    {#</div>#}
+    {#Add listing#}
+    {#</a>#}
+    {#<a class="nav-link" href="add-listing-with-menu-list.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-book-open"></i>#}
+    {#</div>#}
+    {#Menu List#}
+    {#</a>#}
+    {#<a class="nav-link" href="orders.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-shopping-cart"></i>#}
+    {#</div>#}
+    {#Orders Page#}
+    {#</a>#}
+    {#<a class="nav-link" href="edit-order.html">#}
+    {#<div class="sb-nav-link-icon">#}
+    {#<i class="feather-settings"></i>#}
+    {#</div>#}
+    {#Edit Order#}
+    {#</a>#}
+
+    <a class="nav-link" href="{{ path('easyadmin') }}">
+        <div class="sb-nav-link-icon">
+            <i class="feather-settings"></i>
+        </div>
+        Autre configuration
+    </a>
+
+</div>
+

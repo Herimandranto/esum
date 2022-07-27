@@ -1,0 +1,136 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ESUM | Présentation{% endblock %}
+{% block body %}
+    <link rel="stylesheet" href="{{ asset('vitrine/style.css') }}">
+    <style>
+        .nav-link{
+            font-size:18px;
+        }
+        .nav-link>a{
+            color: #756f6f;
+        }
+        .top-navbar{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+        #carousel-item{
+            height:500px;
+        }
+        .carousel-indicators .active{
+            height: 3px;
+            width: 27px;
+        }
+        .dropdown-item{
+            font-size: 15px;
+            font-weight: bold;
+        }
+        #lead{
+            font-weight: bold;
+        }
+        #overviews{
+            margin-top:-20px;
+            margin-right:-15px;
+            margin-left:-15px;
+        }
+        .fadeIn{
+            margin-bottom:150px;
+            margin-left:100px;
+        }
+        #copyrights{
+            margin-left:-15px;
+            margin-right:-15px;
+        }
+        .mg{
+            margin-top:70px;
+            margin-bottom:20px;
+        }
+        .bg-new{
+            background-color: #eff3f3;
+        }
+        p{
+            color:#333333;
+            font-weight:500;
+        }
+    </style>
+    <!-- LOADER -->
+    <div id="preloader">
+        <div class="loader-container">
+            <div class="progress-br float shadow">
+                <div class="progress__item"></div>
+            </div>
+        </div>
+    </div>
+    <!-- END LOADER -->
+    <div class="container-fluid">
+        <!-- ======= Top nav ======= -->
+        <!-- Start header -->
+        {{ include('vitrine/header.html.twig') }}
+        <!-- End header -->
+        <div id="overviews" class="section lb">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                      <div class="card mg">
+                          <div class="card-body">
+                              <div class="osahan-account-page-left shadow-sm bg-white h-100">
+                                  <div class="border-bottom p-4">
+                                      <div class="osahan-user text-center">
+                                          <div class="osahan-user-media">
+                                              <img class="mb-3 rounded-pill shadow-sm mt-1" width="200px" src="{{ asset('images/avatars/le-president.png') }}" alt="president">
+                                              <div class="osahan-user-media-body">
+                                                  <h5 class="mb-2" style="font-weight:bold">LE PRÉSIDENT FONDATEUR</h5>
+                                                  <h5 class="mb-2" style="font-weight:bold">RABETSITONTA Tovonanahary Andriamaneho</h5>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="card">
+                                      <div class="card-body">
+                                          <p class="text-center text-dark" style="font-weight: bold; background-color: rgba(218,221,216,0.9);">MAITRE DE CONFÉRENCES DE L’UNIVERSITÉ D’ANTANANARIVO STATISTICIEN-DEMOGRAPHE</p>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                    </div>
+                    <div class="col-md-8">
+                        <h1>PRÉAMBULE</h1>
+                        <h4>VIDEO DE PRESENTATION</h4>
+                        <div class="card">
+                            <div class="card-body">
+                                <iframe width="100%" height="408px" src="https://www.youtube.com/embed/gJLeOebVaN0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="bg-new">
+                            <div class="message-box">
+                                <p>MADAGASCAR a besoin de cadres performants pour accompagner le développement rapide du pays. Des cadres dotés d’une nouvelle vision en phase aux différentes mutations structurelles et méthodologiques que connaissent la création des richesses et leur distribution avec les contraintes et les opportunités qui les sous-tendent</p>
+                                <p>Le temps de l’enseignement uniquement académique est révolu. L’enseignement supérieur est appelé de plus en plus à fournir une formation et un apprentissage de haut niveau en adéquation aux demandes d’une économie en transition rapide.</p>
+                                <p>La croissance démographique élevée et la déconcentration de l’enseignement par la multiplication des lycées et des collèges privés dans les différentes localités administratives déversent un nombre de plus en plus important de bacheliers que nos universités publiques n’arrivent plus à accueillir.</p>
+                                <p>Depuis le début du vingt unième (21 ème) siècle le pays a connu l’apparition d’une multitude d’universités privées répondant à une demande quantitative toujours croissante.</p>
+                                <p>D’autre part, beaucoup de bacheliers sont tentés de poursuivre leurs études à l’étranger sans discernement du parcours de formation. Une grande majorité ayant réussi leurs études préfèrent y rester pour leur carrière professionnelle et participent ainsi à la fuite de cerveaux.</p>
+                                <p>Il faut reconnaître que les diplômés des écoles de formation à l’étranger trouvent plus facilement un emploi et bénéficient d’un salaire plus rémunérateur. Vu la dure concurrence des diplômes à l’accessibilité des postes de cadres dans les grandes entreprises, beaucoup des parents optent pour une formation à l’étranger de leurs enfants.</p>
+                                <p>Malheureusement la plupart des parents n’arrivent pas à assurer financièrement les études de leurs enfants à l’extérieur, faisant apparaître une discrimination flagrante d’injustice sociale.</p>
+                                <p><strong>L’ECOLE SUPERIEURE DE MANAGEMENT</strong> répond aux aspirations des parents d’élèves d’éduquer et de former leurs enfants à l’instar des diplômés dans les pays développés pour accéder facilement à des hauts postes de responsabilité aussi bien dans les entreprises privées que dans l’administration publique, voire même dans des organisations internationales.</p>
+                                <p><strong>L’ECOLE SUPERIEURE DE MANAGEMENT</strong> dispense essentiellement une formation à distance, laquelle est pratiquée de plus en plus dans les pays développés, voire dans le monde entier depuis la pandémie du COVID 19. Elle ambitionne par cette méthode de contribuer à la formation supérieure des cadres administratifs dans le secteur public dont plus du tiers des effectifs sont en âge de la retraite sans qu’aucune mesure de relève n’a été envisagée.</p>
+                                <p>Le management moderne s’intègre dans le cadre de la mondialisation et s’approprie des techniques modernes de la démarche numérique pour faire face aux dures concurrences de l’offre sur les marchés internationaux.</p>
+                                <p><strong>L’ECOLE SUPERIEURE DE MANAGEMENT</strong> comporte dès sa première année de création six (6) mentions de formation constituant le socle de ce management moderne : <strong>« ECONOMIE », « GESTION », « STATISTIQUE », « INFORMATIQUE», « COMMUNICATION » et « DROIT PRIVE »</strong>. Pour l’année académique 2020-2021 dont la rentrée est programmée le 1er Décembre 2020, la première année de licence L1 sera effective. Les deux autres années L2 et L3 seront programmées au fur et à mesure.</p>
+                                <p>Dans les prochaines années, l’ESUM ambitionne non seulement d’ajouter d’autres mentions, mais aussi de prolonger chacune des mentions existantes par une année de M1 et de M2.</p>
+                            </div><!-- end messagebox -->
+                        </div>
+                    </div>
+                </div><!-- end row -->
+            </div><!-- end container -->
+        </div><!-- end section -->
+        <!---- footer ---------------->
+        {{ include('vitrine/footer.html.twig') }}
+        <!---- end footer ------------>
+    </div>
+    {% block main %}
+    {% endblock %}
+{% endblock %}
